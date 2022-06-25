@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px white solid;
+  border-radius: 10px;
+  width: 50vw;
+  margin: auto;
+  margin-top: 25px;
+}
+.game-name {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-left: 30px;
+  padding: 5px 0px;
+}
+.score {
+  margin-right: 30px;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  width: 150px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-radius: 20px;
+}
+.title {
+  font-size: 20px;
+  color: rgb(46, 46, 120);
+}
+.number {
+  font-size: 55px;
+  font-weight: 800;
+  color: rgba(23, 21, 21, 0.679);
+}
+.rules-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 25px;
+  color: white;
+  border: 1px white solid;
+  border-radius: 8px;
+  padding: 5px 10px;
+  transition: 1s;
+  z-index: 999;
+}
+@media (max-width: 550px) {
+  .rules-btn {
+    position: absolute;
+    margin-top: 100%;
+    right: 41%;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px white solid;
+    border-radius: 10px;
+    width: 80vw;
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+.rules-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  box-shadow: 5px;
+}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.rules {
+  display: block;
+  background-color: white;
+  width: 25vw;
+  z-index: 5;
+  cursor: default;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+#close-btn {
+  width: 25px;
+  height: 25px;
+}
+#close-btn:hover {
+  cursor: pointer;
+}
+
+.close {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
